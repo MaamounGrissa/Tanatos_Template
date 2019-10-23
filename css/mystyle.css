@@ -1,0 +1,666 @@
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+body {
+  font-size: 1.2vw;
+}
+
+h3,
+h2 {
+  font-weight: 500;
+  color: #505050;
+}
+
+p {
+  line-height: 1.6;
+  color: #888;
+}
+
+.container {
+  width: 70%;
+  height: 100%;
+  margin: 0 auto;
+}
+
+.overlay {
+  width: 100%;
+  height: 100%;
+  background-color: rgba(49, 55, 61, 0.8);
+}
+
+.background {
+  background-size: cover !important;
+  background-position: center center !important;
+  background-repeat: no-repeat !important;
+  color: white;
+}
+
+.button {
+  background: transparent;
+  padding: 0.7vw 0;
+  border: 1px solid #909090;
+  border-radius: 10px;
+  color: white;
+  font-size: 1.2vw;
+  -webkit-transition: all .5s ease-in-out;
+  transition: all .5s ease-in-out;
+  cursor: pointer;
+}
+
+.button:hover {
+  background-color: #f7600e;
+  border-color: #f7600e;
+}
+
+.table {
+  display: table;
+  height: 100%;
+  position: relative;
+}
+
+.table-row {
+  display: table-row;
+}
+
+.hidden {
+  display: none;
+}
+
+.upper {
+  text-transform: uppercase;
+}
+
+.clearfix {
+  clear: both;
+}
+
+header {
+  background: url(../imgs/header.jpg);
+}
+
+header .navbar {
+  padding: 1.5% 0;
+  line-height: 1.7vw;
+  overflow: hidden;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+}
+
+header .navbar > span:first-of-type {
+  float: left;
+  font-size: 1.7vw;
+  cursor: pointer;
+}
+
+header .navbar > span:first-of-type span {
+  color: #f7600e;
+}
+
+header .navbar > span:last-of-type {
+  float: right;
+  line-height: 1.7vw;
+  font-size: 1.7vw;
+}
+
+header .navbar > span:last-of-type i {
+  margin-left: 4px;
+  line-height: 1.7vw;
+  cursor: pointer;
+}
+
+header .intro {
+  text-align: center;
+}
+
+header .intro h1 {
+  font-family: 'Open Sans', sans-serif;
+  font-size: 3vw;
+  margin: 0 0 1vw;
+}
+
+header .intro h1 span {
+  color: #f7600e;
+}
+
+header .intro p {
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  line-height: 1.6;
+  width: 60%;
+  margin: 0 auto 2vw;
+}
+
+header .intro .buttons button {
+  width: 12vw;
+  margin: 0 6px;
+}
+
+header .arrow {
+  color: white;
+  font-size: 2vw;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  padding: 1%;
+  text-align: center;
+}
+
+header .arrow i {
+  cursor: pointer;
+}
+
+section.features {
+  padding: 4vw 0;
+  overflow: hidden;
+}
+
+section.features .item {
+  float: left;
+  width: 22%;
+  margin-right: 4%;
+  text-align: center;
+}
+
+section.features .item:last-child {
+  margin-right: 0;
+}
+
+section.features .item i {
+  font-size: 3vw;
+  color: #f7600e;
+  width: 65%;
+  padding: 3.5vw;
+  border: 1px solid #c8cacd;
+  border-radius: 50%;
+  -webkit-transition: all .5s ease-in-out;
+  transition: all .5s ease-in-out;
+}
+
+section.features .item i:hover {
+  background-color: #f7600e;
+  color: white;
+}
+
+section.features .item h3 {
+  margin: 1.5vw 0;
+}
+
+section.subscribe {
+  height: 12vw;
+  background: url(../imgs/subscribe.jpg);
+}
+
+section.subscribe form {
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+section.subscribe form div {
+  width: 45%;
+  margin-right: 4%;
+  position: relative;
+}
+
+section.subscribe form div input {
+  width: 100%;
+  border-radius: 10px;
+  padding: 0 1.5vw;
+  border: none;
+  height: 2.5vw;
+  line-height: 2.5vw;
+  font-size: 1vw;
+}
+
+section.subscribe form div .errorMsg {
+  position: absolute;
+  width: 100%;
+  bottom: -20px;
+  left: 10px;
+  color: red;
+  display: none;
+}
+
+section.subscribe form input[type='submit'] {
+  width: 20%;
+  padding: 0;
+  height: 2.5vw;
+  border: 1px solid #909090;
+}
+
+section.subscribe form input[type='submit']:hover {
+  border-color: #f7600e;
+}
+
+section.subscribe form .sucsessSubscribe {
+  line-height: 2.5vw;
+  margin-left: 0.5vw;
+  color: green;
+  display: none;
+}
+
+section.subscribe form .sucsessSubscribe i {
+  margin-right: 2px;
+}
+
+section.our-work {
+  padding: 4vw 0;
+  text-align: center;
+}
+
+section.our-work h2 {
+  margin: 0 auto 1.5%;
+}
+
+section.our-work h2 span {
+  color: #f7600e;
+}
+
+section.our-work p {
+  margin: 0 0 4.5vw;
+}
+
+section.our-work .photos .photos-row {
+  margin-bottom: 1.5vw;
+  overflow: hidden;
+}
+
+section.our-work .photos .photos-row .photo-box {
+  width: 32%;
+  height: 18vw;
+  float: left;
+  margin-right: 2%;
+  border-radius: 5px;
+  position: relative;
+}
+
+section.our-work .photos .photos-row .photo-box:last-child {
+  margin-right: 0;
+}
+
+section.our-work .photos .photos-row .photo-box img {
+  width: 100%;
+  height: 100%;
+  border-radius: 5px;
+}
+
+section.our-work .photos .photos-row .photo-box .over {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(247, 96, 14, 0.85);
+  color: white;
+  border-radius: 5px;
+  text-align: center;
+  display: none;
+}
+
+section.our-work .photos .photos-row .photo-box .over h4 {
+  margin-top: 3vw;
+}
+
+section.our-work .photos .photos-row .photo-box .over p {
+  color: white;
+  line-height: 1.4;
+  margin: 1.5vw auto 2.5vw;
+  width: 90%;
+}
+
+section.our-work .photos .photos-row .photo-box .over button {
+  width: 50%;
+  color: white;
+  border-color: white;
+  margin: 0;
+  font-size: 1vw;
+  padding: 0.5vw;
+}
+
+section.our-work .photos .photos-row .photo-box .over button:hover {
+  background-color: white;
+  color: #f7600e;
+}
+
+section.our-work .photos .photos-row .photo-box:hover .over {
+  display: block;
+}
+
+section.our-work button {
+  color: #505050;
+  width: 20%;
+  margin: 2vw 0;
+}
+
+section.our-work button:hover {
+  color: white;
+}
+
+section.testimonials {
+  height: 25vw;
+  background: url(../imgs/testimonials.jpg);
+}
+
+section.testimonials .container {
+  position: relative;
+}
+
+section.testimonials .client {
+  padding: 3vw 5vw;
+  text-align: center;
+}
+
+section.testimonials .client img {
+  display: block;
+  margin: 0 auto;
+  width: 8vw;
+  border-radius: 50%;
+}
+
+section.testimonials .client q {
+  display: block;
+  margin: 2vw auto;
+  line-height: 1.6;
+  font-size: 1.3vw;
+  font-style: italic;
+}
+
+section.testimonials .client span {
+  font-size: 1.5vw;
+}
+
+section.testimonials .fa-chevron-right,
+section.testimonials .fa-chevron-left {
+  cursor: pointer;
+  position: absolute;
+  top: 45%;
+}
+
+section.testimonials .fa-chevron-right:hover,
+section.testimonials .fa-chevron-left:hover {
+  color: #f7600e;
+}
+
+section.testimonials .fa-chevron-right {
+  right: 0;
+}
+
+section.testimonials .fa-chevron-left {
+  left: 0;
+}
+
+section.our-team {
+  padding: 4vw 0;
+  text-align: center;
+}
+
+section.our-team h2 {
+  margin: 0 auto 1.5%;
+}
+
+section.our-team h2 span {
+  color: #f7600e;
+}
+
+section.our-team p {
+  margin: 0 0 4.5vw;
+}
+
+section.our-team .team {
+  overflow: hidden;
+  -webkit-transition: all 0.5s ease-in-out;
+  transition: all 0.5s ease-in-out;
+  padding: 1.5vw;
+}
+
+section.our-team .team .person {
+  width: 22.75%;
+  float: left;
+  margin-right: 3%;
+  -webkit-transition: all 0.5s ease-in-out;
+  transition: all 0.5s ease-in-out;
+}
+
+section.our-team .team .person:last-child {
+  margin-right: 0;
+}
+
+section.our-team .team .person img {
+  width: 100%;
+  border-radius: 10px;
+  -webkit-filter: gray;
+          filter: gray;
+  -webkit-filter: grayscale(1);
+          filter: grayscale(1);
+  -webkit-transition: all 0.5s ease-in-out;
+  transition: all 0.5s ease-in-out;
+}
+
+section.our-team .team .person span {
+  margin: -0.4vw auto 0;
+  width: 99%;
+  height: 3px;
+  background-color: #f7600e;
+  border: 1px solid #f7600e;
+  border-radius: 10px;
+  display: none;
+}
+
+section.our-team .team .person h3 {
+  margin: 1.5vw 0;
+  color: #888;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 1.6vw;
+}
+
+section.our-team .team .person .social {
+  margin-bottom: 1.5vw;
+}
+
+section.our-team .team .person .social i {
+  width: 15%;
+  margin: 0 1px;
+  padding: 0.5vw;
+  border-radius: 50%;
+  font-size: 1.3vw;
+  line-height: 1.3vw;
+  color: white;
+  background-color: #888;
+  -webkit-transition: all .5s ease-in-out;
+  transition: all .5s ease-in-out;
+}
+
+section.our-team .team .person p {
+  font-size: 1vw;
+}
+
+section.our-team .team .person:hover {
+  -webkit-transform: scale(1.05, 1.05);
+          transform: scale(1.05, 1.05);
+}
+
+section.our-team .team .person:hover img {
+  -webkit-filter: none;
+          filter: none;
+  border-bottom-right-radius: 2px;
+  border-bottom-left-radius: 2px;
+}
+
+section.our-team .team .person:hover span {
+  display: block;
+}
+
+section.our-team .team .person:hover h3 {
+  color: #3b434c;
+}
+
+section.our-team .team .person:hover i.fa-facebook-f {
+  background-color: #3b5999;
+}
+
+section.our-team .team .person:hover i.fa-twitter {
+  background-color: #55acee;
+}
+
+section.our-team .team .person:hover i.fa-google-plus-g {
+  background-color: #dd4b39;
+}
+
+section.our-team .team .person:hover p {
+  color: #666;
+}
+
+section.contact {
+  height: 40vw;
+  background: url(../imgs/contact.jpg);
+  text-align: center;
+}
+
+section.contact .container {
+  padding-top: 4vw;
+}
+
+section.contact h2 {
+  margin: 0 auto 1.5%;
+  color: white;
+}
+
+section.contact h2 span {
+  color: #f7600e;
+}
+
+section.contact p {
+  margin: 0 0 4.5vw;
+  color: white;
+}
+
+section.contact form {
+  margin: 4vw 0 0;
+  text-align: center;
+}
+
+section.contact form .input {
+  width: 70%;
+  margin: auto;
+}
+
+section.contact form .input input {
+  border: none;
+  padding: 1vw;
+  border-radius: 10px;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+section.contact form .input .mailField {
+  display: inline-block;
+  width: 48%;
+  margin-right: 2.5%;
+  position: relative;
+}
+
+section.contact form .input .mailField input {
+  width: 100%;
+}
+
+section.contact form .input .mailField .contactErrorMsg {
+  position: absolute;
+  width: 100%;
+  bottom: -22px;
+  left: 0;
+  color: red;
+  display: none;
+}
+
+section.contact form .input input[name='subject'] {
+  display: inline-block;
+  width: 48%;
+}
+
+section.contact form textarea {
+  display: block;
+  margin: 2vw auto;
+  width: 69.5%;
+  height: 10vw;
+  border-radius: 10px;
+  border: none;
+  padding: 1vw;
+  resize: none;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+section.contact form .submit {
+  width: 70%;
+  margin: auto;
+  overflow: hidden;
+}
+
+section.contact form .submit input[type='submit'] {
+  float: left;
+  width: 25%;
+  background-color: #f7600e;
+  color: white;
+  font-size: 1.3vw;
+  border-radius: 10px;
+  border: none;
+  font-family: Arial, Helvetica, sans-serif;
+  padding: 0.5vw;
+  cursor: pointer;
+}
+
+section.contact form .submit .sucsessContact {
+  float: left;
+  line-height: 2.5vw;
+  margin-left: 0.5vw;
+  color: green;
+  display: none;
+}
+
+section.contact form .submit .sucsessContact i {
+  margin-right: 2px;
+}
+
+section.contact form .submit .contact-social {
+  float: right;
+}
+
+section.contact form .submit .contact-social img {
+  width: 2.5vw;
+  margin-left: 0.3vw;
+  cursor: pointer;
+}
+
+footer {
+  height: 5vw;
+  background-color: #3b434c;
+}
+
+footer .container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+footer .container p {
+  color: #d2d1d8;
+  font-size: 1.1vw;
+}
+/*# sourceMappingURL=mystyle.css.map */
