@@ -10,6 +10,12 @@ body {
   overflow-x: hidden;
 }
 
+@media screen and (max-width: 600px) {
+  body {
+    font-size: 12px;
+  }
+}
+
 h3,
 h2 {
   font-weight: 500;
@@ -30,6 +36,12 @@ a {
   width: 70%;
   height: 100%;
   margin: 0 auto;
+}
+
+@media screen and (max-width: 600px) {
+  .container {
+    width: 90%;
+  }
 }
 
 .overlay {
@@ -55,6 +67,13 @@ a {
   -webkit-transition: all .5s ease-in-out;
   transition: all .5s ease-in-out;
   cursor: pointer;
+}
+
+@media screen and (max-width: 600px) {
+  .button {
+    padding: 8px 0;
+    font-size: 12px;
+  }
 }
 
 .button:hover {
@@ -114,12 +133,26 @@ nav {
   display: none;
 }
 
+@media screen and (max-width: 600px) {
+  nav {
+    height: 400px;
+    padding-top: 35px;
+    font-size: 12px;
+  }
+}
+
 nav i {
   position: absolute;
   top: 2%;
   left: 5%;
   font-size: 2.5vw;
   cursor: pointer;
+}
+
+@media screen and (max-width: 600px) {
+  nav i {
+    font-size: 15px;
+  }
 }
 
 nav a {
@@ -129,15 +162,33 @@ nav a {
   border-bottom: 1px solid rgba(247, 96, 14, 0.3);
 }
 
+@media screen and (max-width: 600px) {
+  nav a {
+    padding: 15px 0;
+  }
+}
+
 header {
   background: url(../imgs/header.jpg);
   -webkit-box-shadow: 0 2px 7px black;
           box-shadow: 0 2px 7px black;
 }
 
+@media screen and (max-width: 600px) {
+  header {
+    height: 400px;
+  }
+}
+
 header .container-header {
   width: 70%;
   height: 100%;
+}
+
+@media screen and (max-width: 600px) {
+  header .container-header {
+    width: 90%;
+  }
 }
 
 header .container-anim {
@@ -154,10 +205,22 @@ header .navbar {
   width: 100%;
 }
 
+@media screen and (max-width: 600px) {
+  header .navbar {
+    padding: 15px 0;
+  }
+}
+
 header .navbar > span:first-of-type {
   float: left;
   font-size: 1.7vw;
   cursor: pointer;
+}
+
+@media screen and (max-width: 600px) {
+  header .navbar > span:first-of-type {
+    font-size: 17px;
+  }
 }
 
 header .navbar > span:first-of-type span {
@@ -168,6 +231,18 @@ header .navbar > span:last-of-type {
   float: right;
   line-height: 1.7vw;
   font-size: 1.7vw;
+}
+
+@media screen and (max-width: 600px) {
+  header .navbar > span:last-of-type {
+    font-size: 20px;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  header .navbar > span:last-of-type span {
+    display: none;
+  }
 }
 
 header .navbar > span:last-of-type i {
@@ -186,6 +261,12 @@ header .intro h1 {
   margin: 0 0 1vw;
 }
 
+@media screen and (max-width: 600px) {
+  header .intro h1 {
+    font-size: 25px;
+  }
+}
+
 header .intro h1 span {
   color: #f7600e;
 }
@@ -197,9 +278,24 @@ header .intro p {
   margin: 0 auto 2vw;
 }
 
+@media screen and (max-width: 600px) {
+  header .intro p {
+    width: 90%;
+    font-size: 11px;
+    margin: 10px auto;
+  }
+}
+
 header .intro .buttons button {
   width: 12vw;
   margin: 0 6px;
+}
+
+@media screen and (max-width: 600px) {
+  header .intro .buttons button {
+    width: 30%;
+    margin: 10px auto;
+  }
 }
 
 header .arrow {
@@ -213,6 +309,14 @@ header .arrow {
   text-align: center;
 }
 
+@media screen and (max-width: 600px) {
+  header .arrow {
+    bottom: initial;
+    top: 380px;
+    font-size: 15px;
+  }
+}
+
 header .arrow i {
   cursor: pointer;
 }
@@ -220,6 +324,12 @@ header .arrow i {
 section.features {
   padding: 4vw 0;
   overflow: hidden;
+}
+
+@media screen and (max-width: 600px) {
+  section.features {
+    padding: 30px 0;
+  }
 }
 
 section.features .item {
@@ -244,6 +354,16 @@ section.features .item i {
   transition: all .5s ease-in-out;
 }
 
+@media screen and (max-width: 600px) {
+  section.features .item i {
+    width: 50px;
+    height: 50px;
+    padding: 0 auto;
+    font-size: 15px;
+    line-height: 25px;
+  }
+}
+
 section.features .item i:hover {
   background-color: #f7600e;
   color: white;
@@ -253,9 +373,28 @@ section.features .item h3 {
   margin: 1.5vw 0;
 }
 
+@media screen and (max-width: 600px) {
+  section.features .item h3 {
+    margin: 10px 0;
+    font-size: 13px;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  section.features .item p {
+    font-size: 9px;
+  }
+}
+
 section.subscribe {
   height: 12vw;
   background: url(../imgs/subscribe.jpg);
+}
+
+@media screen and (max-width: 600px) {
+  section.subscribe {
+    height: 80px;
+  }
 }
 
 section.subscribe form {
@@ -277,6 +416,12 @@ section.subscribe form div {
   position: relative;
 }
 
+@media screen and (max-width: 600px) {
+  section.subscribe form div {
+    width: 60%;
+  }
+}
+
 section.subscribe form div input {
   width: 100%;
   border-radius: 10px;
@@ -287,6 +432,14 @@ section.subscribe form div input {
   font-size: 1vw;
 }
 
+@media screen and (max-width: 600px) {
+  section.subscribe form div input {
+    height: 20px;
+    font-size: 10px;
+    padding: 0 10px;
+  }
+}
+
 section.subscribe form div .errorMsg {
   position: absolute;
   width: 100%;
@@ -294,6 +447,14 @@ section.subscribe form div .errorMsg {
   left: 10px;
   color: red;
   display: none;
+}
+
+@media screen and (max-width: 600px) {
+  section.subscribe form div .errorMsg {
+    bottom: -17px;
+    left: 5px;
+    font-size: 9px;
+  }
 }
 
 section.subscribe form div .errorMsg i {
@@ -307,6 +468,14 @@ section.subscribe form input[type='submit'] {
   border: 1px solid #909090;
 }
 
+@media screen and (max-width: 600px) {
+  section.subscribe form input[type='submit'] {
+    width: 30%;
+    height: 20px;
+    font-size: 11px;
+  }
+}
+
 section.subscribe form input[type='submit']:hover {
   border-color: #f7600e;
 }
@@ -318,6 +487,13 @@ section.subscribe form .sucsessSubscribe {
   display: none;
 }
 
+@media screen and (max-width: 600px) {
+  section.subscribe form .sucsessSubscribe {
+    font-size: 8px;
+    margin-left: 5px;
+  }
+}
+
 section.subscribe form .sucsessSubscribe i {
   margin-right: 2px;
 }
@@ -327,8 +503,20 @@ section.our-work {
   text-align: center;
 }
 
+@media screen and (max-width: 600px) {
+  section.our-work {
+    padding: 30px 0;
+  }
+}
+
 section.our-work h2 {
   margin: 0 auto 1.5%;
+}
+
+@media screen and (max-width: 600px) {
+  section.our-work h2 {
+    margin: 0 auto 20px;
+  }
 }
 
 section.our-work h2 span {
@@ -337,6 +525,12 @@ section.our-work h2 span {
 
 section.our-work p {
   margin: 0 0 4.5vw;
+}
+
+@media screen and (max-width: 600px) {
+  section.our-work p {
+    margin: 0 0 20px;
+  }
 }
 
 section.our-work .photos .photos-row {
@@ -351,6 +545,12 @@ section.our-work .photos .photos-row .photo-box {
   margin-right: 2%;
   border-radius: 5px;
   position: relative;
+}
+
+@media screen and (max-width: 600px) {
+  section.our-work .photos .photos-row .photo-box {
+    height: 95px;
+  }
 }
 
 section.our-work .photos .photos-row .photo-box:last-child {
@@ -380,11 +580,25 @@ section.our-work .photos .photos-row .photo-box .over h4 {
   margin-top: 3vw;
 }
 
+@media screen and (max-width: 600px) {
+  section.our-work .photos .photos-row .photo-box .over h4 {
+    font-size: 10px;
+    margin-top: 10px;
+  }
+}
+
 section.our-work .photos .photos-row .photo-box .over p {
   color: white;
   line-height: 1.4;
   margin: 1.5vw auto 2.5vw;
   width: 90%;
+}
+
+@media screen and (max-width: 600px) {
+  section.our-work .photos .photos-row .photo-box .over p {
+    font-size: 9px;
+    margin: 10px auto 10px;
+  }
 }
 
 section.our-work .photos .photos-row .photo-box .over button {
@@ -394,6 +608,16 @@ section.our-work .photos .photos-row .photo-box .over button {
   margin: 0;
   font-size: 1vw;
   padding: 0.5vw;
+}
+
+@media screen and (max-width: 600px) {
+  section.our-work .photos .photos-row .photo-box .over button {
+    width: 80%;
+    height: 15px;
+    line-height: 15px;
+    padding: 0 5px;
+    font-size: 8px;
+  }
 }
 
 section.our-work .photos .photos-row .photo-box .over button:hover {
@@ -411,6 +635,12 @@ section.our-work button {
   margin: 2vw 0;
 }
 
+@media screen and (max-width: 600px) {
+  section.our-work button {
+    width: 40%;
+  }
+}
+
 section.our-work button:hover {
   color: white;
 }
@@ -418,6 +648,12 @@ section.our-work button:hover {
 section.testimonials {
   height: 25vw;
   background: url(../imgs/testimonials.jpg);
+}
+
+@media screen and (max-width: 600px) {
+  section.testimonials {
+    height: 150px;
+  }
 }
 
 section.testimonials .container {
@@ -429,11 +665,24 @@ section.testimonials .client {
   text-align: center;
 }
 
+@media screen and (max-width: 600px) {
+  section.testimonials .client {
+    padding: 15px;
+  }
+}
+
 section.testimonials .client img {
   display: block;
   margin: 0 auto;
   width: 8vw;
   border-radius: 50%;
+}
+
+@media screen and (max-width: 600px) {
+  section.testimonials .client img {
+    width: 50px;
+    height: 50px;
+  }
 }
 
 section.testimonials .client q {
@@ -444,8 +693,26 @@ section.testimonials .client q {
   font-style: italic;
 }
 
+@media screen and (max-width: 600px) {
+  section.testimonials .client q {
+    font-size: 10px;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  section.testimonials .client q br {
+    display: none;
+  }
+}
+
 section.testimonials .client span {
   font-size: 1.5vw;
+}
+
+@media screen and (max-width: 600px) {
+  section.testimonials .client span {
+    font-size: 13px;
+  }
 }
 
 section.testimonials .fa-chevron-right,
@@ -473,8 +740,20 @@ section.our-team {
   text-align: center;
 }
 
+@media screen and (max-width: 600px) {
+  section.our-team {
+    padding: 30px 0;
+  }
+}
+
 section.our-team h2 {
   margin: 0 auto 1.5%;
+}
+
+@media screen and (max-width: 600px) {
+  section.our-team h2 {
+    margin: 0 auto 15px;
+  }
 }
 
 section.our-team h2 span {
@@ -549,6 +828,15 @@ section.our-team .team .person .social i {
   transition: all .5s ease-in-out;
 }
 
+@media screen and (max-width: 600px) {
+  section.our-team .team .person .social i {
+    width: 10px;
+    height: 10px;
+    line-height: 10px;
+    padding: 0;
+  }
+}
+
 section.our-team .team .person p {
   font-size: 1vw;
 }
@@ -595,13 +883,31 @@ section.contact {
   text-align: center;
 }
 
+@media screen and (max-width: 600px) {
+  section.contact {
+    height: 280px;
+  }
+}
+
 section.contact .container {
   padding-top: 4vw;
+}
+
+@media screen and (max-width: 600px) {
+  section.contact .container {
+    padding-top: 20px;
+  }
 }
 
 section.contact h2 {
   margin: 0 auto 1.5%;
   color: white;
+}
+
+@media screen and (max-width: 600px) {
+  section.contact h2 {
+    margin: 0 auto 15px;
+  }
 }
 
 section.contact h2 span {
@@ -618,9 +924,21 @@ section.contact form {
   text-align: center;
 }
 
+@media screen and (max-width: 600px) {
+  section.contact form {
+    margin: 20px 0 0;
+  }
+}
+
 section.contact form .input {
   width: 70%;
   margin: auto;
+}
+
+@media screen and (max-width: 600px) {
+  section.contact form .input {
+    width: 95%;
+  }
 }
 
 section.contact form .input input {
@@ -628,6 +946,14 @@ section.contact form .input input {
   padding: 1vw;
   border-radius: 10px;
   font-family: Arial, Helvetica, sans-serif;
+}
+
+@media screen and (max-width: 600px) {
+  section.contact form .input input {
+    font-size: 12px;
+    height: 20px;
+    padding: 0 10px;
+  }
 }
 
 section.contact form .input .mailField {
@@ -650,6 +976,14 @@ section.contact form .input .mailField .contactErrorMsg {
   display: none;
 }
 
+@media screen and (max-width: 600px) {
+  section.contact form .input .mailField .contactErrorMsg {
+    font-size: 9px;
+    bottom: -13px;
+    left: -5px;
+  }
+}
+
 section.contact form .input input[name='subject'] {
   display: inline-block;
   width: 48%;
@@ -667,10 +1001,24 @@ section.contact form textarea {
   font-family: Arial, Helvetica, sans-serif;
 }
 
+@media screen and (max-width: 600px) {
+  section.contact form textarea {
+    margin: 18px auto 10px;
+    height: 70px;
+    width: 94.5%;
+  }
+}
+
 section.contact form .submit {
   width: 70%;
   margin: auto;
   overflow: hidden;
+}
+
+@media screen and (max-width: 600px) {
+  section.contact form .submit {
+    width: 93%;
+  }
 }
 
 section.contact form .submit input[type='submit'] {
@@ -684,6 +1032,14 @@ section.contact form .submit input[type='submit'] {
   font-family: Arial, Helvetica, sans-serif;
   padding: 0.5vw;
   cursor: pointer;
+}
+
+@media screen and (max-width: 600px) {
+  section.contact form .submit input[type='submit'] {
+    width: 30%;
+    height: 20px;
+    font-size: 12px;
+  }
 }
 
 section.contact form .submit input[type='submit']:hover {
@@ -700,8 +1056,20 @@ section.contact form .submit .sucsessContact {
   display: none;
 }
 
+@media screen and (max-width: 600px) {
+  section.contact form .submit .sucsessContact {
+    font-size: 11px;
+  }
+}
+
 section.contact form .submit .sucsessContact i {
   margin-right: 2px;
+}
+
+@media screen and (max-width: 600px) {
+  section.contact form .submit .sucsessContact i {
+    margin-right: 5px;
+  }
 }
 
 section.contact form .submit .contact-social {
@@ -714,9 +1082,23 @@ section.contact form .submit .contact-social img {
   cursor: pointer;
 }
 
+@media screen and (max-width: 600px) {
+  section.contact form .submit .contact-social img {
+    width: 15px;
+    height: 15px;
+  }
+}
+
+/* Footer Style */
 footer {
   height: 5vw;
   background-color: #3b434c;
+}
+
+@media screen and (max-width: 600px) {
+  footer {
+    height: 35px;
+  }
 }
 
 footer .container {
@@ -734,5 +1116,11 @@ footer .container {
 footer .container p {
   color: #d2d1d8;
   font-size: 1.1vw;
+}
+
+@media screen and (max-width: 600px) {
+  footer .container p {
+    font-size: 10px;
+  }
 }
 /*# sourceMappingURL=mystyle.css.map */

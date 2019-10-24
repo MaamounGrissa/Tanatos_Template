@@ -7,13 +7,21 @@ $(function () {
     */
     // Set Height 100% to Header
 
-    $("header").height($(window).height())
+    if ($(window).width() >= 600) {
+        $("header").height($(window).height())
+    } else {
+        $("header").height(400)
+    }
 
     // Set Height 100% to Header on resize
 
     $(window).resize(function () {
 
-        $("header").height($(window).height())
+        if ($(window).width() >= 600) {
+            $("header").height($(window).height())
+        } else {
+            $("header").height(400)
+        }
 
     })
 
@@ -27,11 +35,31 @@ $(function () {
             right: "0"
         }, 1000)
 
-        $("header .container-header").removeClass('container-anim', {duration:1000})
+        $("header .container-header").removeClass('container-anim', { duration: 1000 })
+
+        if ($(window).width() <= 600) {
+            
+            $(".navbar span:contains('Tanatos')").animate({
+                marginLeft: "10px"
+            },1000)
+            
+            $(".intro h1").animate({
+                fontSize: "20px",
+                marginLeft: "-50px"
+            },1000)
+            $(".intro p").animate({
+                fontSize: "9px",
+                width: "70%",
+                marginLeft: "20px"
+            },1000)
+            $(".intro .buttons").animate({
+                marginLeft: "-50px"
+            },1000)
+        }
 
         $("header .arrow").animate({
             width: "70%"
-        },1000)
+        }, 1000)
 
         $("#menu").hide(0)
 
@@ -39,19 +67,41 @@ $(function () {
 
     // Hide Menu
 
-    $("nav i").click(function () {
+    $("nav i").click(function (e) {
+        
+            $("nav").animate({
+                right: "-25%"
+            }, 1000, function () { $("nav").hide(0) })
+    
+            $("header .container-header").addClass('container-anim', { duration: 1000 })
+    
+            if ($(window).width() <= 600) {
 
-        $("nav").animate({
-            right: "-25%"
-        }, 1000, function () { $("nav").hide(0) })
+                $(".navbar span:contains('Tanatos')").animate({
+                    marginLeft: "0"
+                },1000, function(){$(this).removeAttr("style")})
 
-        $("header .container-header").addClass('container-anim', {duration:1000})
+                $(".intro h1").animate({
+                    fontSize: "25px",
+                    marginLeft: "0"
+                },1000, function(){$(this).removeAttr("style")})
 
-        $("header .arrow").animate({
-            width: "100%"
-        },1000)
+                $(".intro p").animate({
+                    fontSize: "11px",
+                    width: "90%",
+                    marginLeft: "auto"
+                },1000, function(){$(this).removeAttr("style")})
 
-        $("#menu").fadeIn(1000)
+                $(".intro .buttons").animate({
+                    marginLeft: "0"
+                },1000, function(){$(this).removeAttr("style")})
+            }
+            
+            $("header .arrow").animate({
+                width: "100%"
+            }, 1000, function(){$(this).removeAttr("style")})
+    
+            $("#menu").fadeIn(1000)
 
     })
 
@@ -182,6 +232,10 @@ $(function () {
 
             sendEmail(myData, $(".sucsessSubscribe"))
 
+            $("form[name='subscribeForm'] input[type='email']").prop("disabled", true)
+
+            $("form[name='subscribeForm'] input[type='submit']").hide()
+
         }
     })
 
@@ -198,7 +252,8 @@ $(function () {
     $("#showMore").click(function () {
 
         $(".photos .hidden").fadeIn(1000)
-        $(this).prop("disabled", true)
+        // $(this).prop("disabled", true)
+        $(this).hide()
 
     })
 
@@ -280,7 +335,11 @@ $(function () {
             // Send Data to php file via AJAX
 
             sendEmail(myData, $(".sucsessContact"))
-
+            $("form[name='contactForm'] input[type='submit']").hide()
+            $("form[name='contactForm'] input[name='contactMail']").prop("disabled", true)
+            $("form[name='contactForm'] input[name='subject']").prop("disabled", true)
+            $("form[name='contactForm'] textarea").prop("disabled", true)
+            
         }
     })
 
