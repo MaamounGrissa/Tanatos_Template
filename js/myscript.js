@@ -1,10 +1,10 @@
 $(function () {
-/*
-    // Trigger Plugin NiceScroll
-    $("html").niceScroll({
-        cursorcolor: 'gray'
-    })
-*/
+    /*
+        // Trigger Plugin NiceScroll
+        $("html").niceScroll({
+            cursorcolor: 'gray'
+        })
+    */
     // Set Height 100% to Header
 
     $("header").height($(window).height())
@@ -17,29 +17,105 @@ $(function () {
 
     })
 
+    // Show Menu
+
+    $("#menu i").click(function () {
+
+        $("nav").show(0)
+
+        $("nav").animate({
+            right: "0"
+        }, 1000)
+
+        $("header .container-header").removeClass('container-anim', {duration:1000})
+
+        $("header .arrow").animate({
+            width: "70%"
+        },1000)
+
+        $("#menu").hide(0)
+
+    })
+
+    // Hide Menu
+
+    $("nav i").click(function () {
+
+        $("nav").animate({
+            right: "-25%"
+        }, 1000, function () { $("nav").hide(0) })
+
+        $("header .container-header").addClass('container-anim', {duration:1000})
+
+        $("header .arrow").animate({
+            width: "100%"
+        },1000)
+
+        $("#menu").fadeIn(1000)
+
+    })
+
+    // Menu
+
+    $("nav a").each(function (index) {
+
+        $(this).click(function () {
+
+            switch (index) {
+                case 0:
+                    $("html, body").animate({
+                        scrollTop: $(".features").offset().top
+                    }, 1000)
+                    break;
+                case 1:
+                    $("html, body").animate({
+                        scrollTop: $(".our-work").offset().top
+                    }, 1500)
+                    break;
+                case 2:
+                    $("html, body").animate({
+                        scrollTop: $(".testimonials").offset().top
+                    }, 1700)
+                    break;
+                case 3:
+                    $("html, body").animate({
+                        scrollTop: $(".our-team").offset().top
+                    }, 1900)
+                    break;
+                case 4:
+                    $("html, body").animate({
+                        scrollTop: $(".contact").offset().top
+                    }, 2100)
+                    break;
+            }
+
+        })
+
+    })
+
     // Scroll to Contact section on HireUs Button click
 
-    $("#hireUs").click(function() {
+    $("#hireUs").click(function () {
         $("html, body").animate({
             scrollTop: $(".contact").offset().top
-        },1500)
+        }, 1500)
     })
 
     // Scroll to Our Works section on ourWorks Button click
 
-    $("#ourWorks").click(function() {
+    $("#ourWorks").click(function () {
         $("html, body").animate({
             scrollTop: $(".our-work").offset().top
-        },1500)
+        }, 1500)
     })
 
     // Scroll to first section on arrow click
 
-    $(".arrow i").click(function() {
+    $(".arrow i").click(function () {
 
         $("html, body").animate({
             scrollTop: $(".features").offset().top
-        },1000)
+        }, 1000)
 
     })
 
@@ -53,36 +129,36 @@ $(function () {
     // Function Send Email via Ajax
 
     function sendEmail(data, back) {
-       
+
         $.ajax({
             type: "POST",
             url: window.location + "mail.php",
-            data: { Data: data},
+            data: { Data: data },
             dataType: 'json',
             encode: true,
-            success: function (data) { 
-                back.css("color", "green")                
+            success: function (data) {
+                back.css("color", "green")
                 back.html('<i class="fas fa-check-circle"></i><span>Email sent successfully</span>')
                 back.fadeIn(500)
-             },
-            error: function (data) { 
+            },
+            error: function (data) {
                 back.css("color", "red")
                 back.html('<i class="fas fa-times"></i></i><span>Send error, please try again later</span>')
                 back.fadeIn(500)
-             }
+            }
         })
     }
-     
 
-    $("form[name='subscribeForm']").submit(function(e){
-        
+
+    $("form[name='subscribeForm']").submit(function (e) {
+
         e.preventDefault()
 
-       var myInputField = $("form[name='subscribeForm'] input[name='mailSub']"),
-           myError = $(".errorMsg")
+        var myInputField = $("form[name='subscribeForm'] input[name='mailSub']"),
+            myError = $(".errorMsg")
         // Cheking Errors
 
-        if (myInputField.val() == "" ) {
+        if (myInputField.val() == "") {
 
             myError.html('<i class="fas fa-exclamation-circle"></i><span>Please enter a valid email adress</span>')
             myError.fadeIn(500)
@@ -111,7 +187,7 @@ $(function () {
 
     // Clear Errors on Input KeyDown
 
-    $("form[name='subscribeForm'] input[name='mailSub']").on('keydown', function() {
+    $("form[name='subscribeForm'] input[name='mailSub']").on('keydown', function () {
         $(".errorMsg").fadeOut(500)
     })
 
@@ -119,7 +195,7 @@ $(function () {
 
     // Show Hidden Photos
 
-    $("#showMore").click(function() {
+    $("#showMore").click(function () {
 
         $(".photos .hidden").fadeIn(1000)
         $(this).prop("disabled", true)
@@ -131,85 +207,85 @@ $(function () {
     var leftArrow = $(".fa-chevron-left"),
         rightArrow = $(".fa-chevron-right")
 
-        // Function FadeOut Arrows ( Left if first Element || Right if Last Element )
+    // Function FadeOut Arrows ( Left if first Element || Right if Last Element )
 
-        function checkClients() {
+    function checkClients() {
 
-            if ($(".client:first").hasClass('active')) {
-                leftArrow.fadeOut()
-            } else {
-                leftArrow.fadeIn()
-            }
+        if ($(".client:first").hasClass('active')) {
+            leftArrow.fadeOut()
+        } else {
+            leftArrow.fadeIn()
+        }
 
-            if ($(".client:last").hasClass('active')) {
-                rightArrow.fadeOut()
-            } else {
-                rightArrow.fadeIn()
-            }
+        if ($(".client:last").hasClass('active')) {
+            rightArrow.fadeOut()
+        } else {
+            rightArrow.fadeIn()
+        }
+
+    }
+
+    checkClients()
+
+    // Browse Element on Arrow click
+
+    $(".testimonials i").click(function () {
+
+        if ($(this).hasClass("fa-chevron-right")) {
+
+            $(".testimonials .active").fadeOut(100, function () {
+                $(this).removeClass('active').next('.client').addClass('active').fadeIn()
+                checkClients()
+            })
+
+        } else if ($(this).hasClass("fa-chevron-left")) {
+
+            $(".testimonials .active").fadeOut(100, function () {
+                $(this).removeClass('active').prev('.client').addClass('active').fadeIn()
+                checkClients()
+            })
 
         }
 
-        checkClients()
+    })
 
-        // Browse Element on Arrow click
+    // 
 
-        $(".testimonials i").click(function() {
+    $("form[name='contactForm']").submit(function (e) {
 
-            if ($(this).hasClass("fa-chevron-right")) {
+        e.preventDefault()
 
-                $(".testimonials .active").fadeOut(100, function() {
-                    $(this).removeClass('active').next('.client').addClass('active').fadeIn()
-                    checkClients()
-                })
+        var myInputField = $("form[name='contactForm'] input[name='contactMail']")
+        // Cheking Errors
 
-            } else if ($(this).hasClass("fa-chevron-left")) {
+        if (myInputField.val() == "") {
 
-                $(".testimonials .active").fadeOut(100, function() {
-                    $(this).removeClass('active').prev('.client').addClass('active').fadeIn()
-                    checkClients()
-                })
+            $(".contactErrorMsg").fadeIn(500)
+            myInputField.focus()
 
+        } else {
+
+            // Collecting Data in a object
+
+            email = myInputField.val()
+            subject = $("input[name='subject']").val()
+            msg = "Email from Contact section : From = " + email + "<br> Subject = " + subject + "<br> Message = " + $("textarea[name='message']").val()
+
+            var myData = {
+                "email": email,
+                "subject": subject,
+                "msg": msg
             }
 
-        })
+            // Send Data to php file via AJAX
 
-        // 
+            sendEmail(myData, $(".sucsessContact"))
 
-        $("form[name='contactForm']").submit(function(e){
+        }
+    })
 
-            e.preventDefault()
+    $("form[name='contactForm'] input[name='contactMail']").on("keydown", function () {
+        $(".contactErrorMsg").fadeOut(500)
+    })
 
-           var myInputField = $("form[name='contactForm'] input[name='contactMail']")
-            // Cheking Errors
-    
-            if (myInputField.val() == "" ) {
-
-                $(".contactErrorMsg").fadeIn(500)
-                myInputField.focus()
-    
-            } else {
-    
-                // Collecting Data in a object
-    
-                email = myInputField.val()
-                subject = $("input[name='subject']").val()
-                msg = "Email from Contact section : From = " + email + "<br> Subject = " + subject + "<br> Message = " + $("textarea[name='message']").val()
-    
-                var myData = {
-                    "email": email,
-                    "subject": subject,
-                    "msg": msg
-                }
-    
-                // Send Data to php file via AJAX
-    
-                sendEmail(myData, $(".sucsessContact"))
-    
-            }
-        })
-
-        $("form[name='contactForm'] input[name='contactMail']").on("keydown", function() {
-            $(".contactErrorMsg").fadeOut(500)
-        })
-    
 })

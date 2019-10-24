@@ -12,6 +12,7 @@ $mainColor: #f7600e;
 
 body {
     font-size: 1.2vw;
+    overflow-x: hidden;
 }
 
 h3,
@@ -23,6 +24,11 @@ h2 {
 p {
     line-height: 1.6;
     color: #888;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
 }
 
 // Frameworks
@@ -84,14 +90,60 @@ p {
     clear: both;
 }
 
+// Menu
+
+nav {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    top: 0;
+    right: -25%;
+    background-color: rgba(49, 55, 61, 0.8);
+    box-shadow: 0 2px 7px black;
+    height: 100%;
+    width: 25%;
+    z-index: 10;
+    justify-content: flex-start;
+    align-items: center;
+    color: $mainColor;
+    text-align: center;
+    padding-top: 3vw;
+    font-size: 1.5vw;
+    display: none;
+
+    i {
+        position: absolute;
+        top: 2%;
+        left: 5%;
+        font-size: 2.5vw;
+        cursor: pointer;
+    }
+
+    a {
+        display: block;
+        width: 100%;
+        padding: 1.5vw;
+        border-bottom: 1px solid rgba(247, 96, 14, 0.3);
+    }
+    
+}
+
 // Header
 
 header {
     background: url(../imgs/header.jpg);
+    box-shadow: 0 2px 7px black;
 
+    .container-header {
+        width: 70%;
+        height: 100%;
+    }
+    .container-anim {
+        margin: 0 auto;
+    }
     .navbar {
 
-        padding: 1.5% 0;
+        padding: 1.5% 1%;
         line-height: 1.7vw;
         overflow: hidden;
         position: absolute;
@@ -238,10 +290,13 @@ section {
                 .errorMsg {
                     position: absolute;
                     width: 100%;
-                    bottom: -20px;
+                    bottom: -25px;
                     left: 10px;
                     color: red;
                     display: none;
+                    i {
+                        margin-right: 5px;
+                    }
                 }
             }
 
@@ -598,8 +653,8 @@ section {
                     .contactErrorMsg {
                         position: absolute;
                         width: 100%;
-                        bottom: -22px;
-                        left: 0;
+                        bottom: -25px;
+                        left: -10px;
                         color: red;
                         display: none;
                     }
@@ -613,7 +668,7 @@ section {
 
             textarea {
                 display: block;
-                margin: 2vw auto;
+                margin: 2.2vw auto;
                 width: 69.5%;
                 height: 10vw;
                 border-radius: 10px;
@@ -639,6 +694,12 @@ section {
                     font-family: Arial, Helvetica, sans-serif;
                     padding: 0.5vw;
                     cursor: pointer;
+
+                    &:hover {
+                        background-color: white;
+                        border-color: white;
+                        color: $mainColor;
+                    }
                 }
 
                 .sucsessContact {

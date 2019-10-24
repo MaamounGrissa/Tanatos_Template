@@ -7,6 +7,7 @@
 
 body {
   font-size: 1.2vw;
+  overflow-x: hidden;
 }
 
 h3,
@@ -18,6 +19,11 @@ h2 {
 p {
   line-height: 1.6;
   color: #888;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
 }
 
 .container {
@@ -78,12 +84,68 @@ p {
   clear: both;
 }
 
+nav {
+  position: absolute;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  top: 0;
+  right: -25%;
+  background-color: rgba(49, 55, 61, 0.8);
+  -webkit-box-shadow: 0 2px 7px black;
+          box-shadow: 0 2px 7px black;
+  height: 100%;
+  width: 25%;
+  z-index: 10;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  color: #f7600e;
+  text-align: center;
+  padding-top: 3vw;
+  font-size: 1.5vw;
+  display: none;
+}
+
+nav i {
+  position: absolute;
+  top: 2%;
+  left: 5%;
+  font-size: 2.5vw;
+  cursor: pointer;
+}
+
+nav a {
+  display: block;
+  width: 100%;
+  padding: 1.5vw;
+  border-bottom: 1px solid rgba(247, 96, 14, 0.3);
+}
+
 header {
   background: url(../imgs/header.jpg);
+  -webkit-box-shadow: 0 2px 7px black;
+          box-shadow: 0 2px 7px black;
+}
+
+header .container-header {
+  width: 70%;
+  height: 100%;
+}
+
+header .container-anim {
+  margin: 0 auto;
 }
 
 header .navbar {
-  padding: 1.5% 0;
+  padding: 1.5% 1%;
   line-height: 1.7vw;
   overflow: hidden;
   position: absolute;
@@ -228,10 +290,14 @@ section.subscribe form div input {
 section.subscribe form div .errorMsg {
   position: absolute;
   width: 100%;
-  bottom: -20px;
+  bottom: -25px;
   left: 10px;
   color: red;
   display: none;
+}
+
+section.subscribe form div .errorMsg i {
+  margin-right: 5px;
 }
 
 section.subscribe form input[type='submit'] {
@@ -578,8 +644,8 @@ section.contact form .input .mailField input {
 section.contact form .input .mailField .contactErrorMsg {
   position: absolute;
   width: 100%;
-  bottom: -22px;
-  left: 0;
+  bottom: -25px;
+  left: -10px;
   color: red;
   display: none;
 }
@@ -591,7 +657,7 @@ section.contact form .input input[name='subject'] {
 
 section.contact form textarea {
   display: block;
-  margin: 2vw auto;
+  margin: 2.2vw auto;
   width: 69.5%;
   height: 10vw;
   border-radius: 10px;
@@ -618,6 +684,12 @@ section.contact form .submit input[type='submit'] {
   font-family: Arial, Helvetica, sans-serif;
   padding: 0.5vw;
   cursor: pointer;
+}
+
+section.contact form .submit input[type='submit']:hover {
+  background-color: white;
+  border-color: white;
+  color: #f7600e;
 }
 
 section.contact form .submit .sucsessContact {
